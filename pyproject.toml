@@ -1,0 +1,21 @@
+[project]
+name = "ml-fantasy-football"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Miles Zheng", email = "mzheng.012@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=2.4.6",
+    "pandas>=3.1.1",
+]
+
+[project.scripts]
+ml-fantasy-football = "ml_fantasy_football:main"
+
+[build-system]
+requires = ["uv_build>=0.13.1,<0.14.0"]
+build-backend = "uv_build"
