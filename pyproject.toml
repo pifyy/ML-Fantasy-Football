@@ -8,9 +8,17 @@ authors = [
 ]
 requires-python = ">=3.11"
 dependencies = [
+    "duckdb>=2.0.0",
+    "lightgbm>=4.7.0",
     "matplotlib>=3.11.2",
+    "nflreadpy>=0.1.5",
     "numpy>=2.4.6",
     "pandas>=3.1.1",
+    "pyarrow>=26.0.1",
+    "pyyaml>=6.0.3",
+    "requests>=2.34.2",
+    "scikit-learn>=1.9.1",
+    "xgboost>=3.2.0",
 ]
 
 [project.scripts]
@@ -19,3 +27,8 @@ ml-fantasy-football = "ml_fantasy_football:main"
 [build-system]
 requires = ["uv_build>=0.13.1,<0.14.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]

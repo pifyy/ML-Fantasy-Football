@@ -1,0 +1,32 @@
+# Regular seasons to pull. 2026 is live-only and is never used for training.
+seasons:
+  first: 2015
+  last: 2025
+
+# Raw nflreadpy tables to cache in data/raw/.
+# per_season: true saves one file per season, so interrupted pulls can resume.
+tables:
+  player_stats: {loader: load_player_stats, per_season: true}
+  snap_counts: {loader: load_snap_counts, per_season: true}
+  injuries: {loader: load_injuries, per_season: true}
+  rosters_weekly: {loader: load_rosters_weekly, per_season: true}
+  schedules: {loader: load_schedules, per_season: true}
+  ff_opportunity: {loader: load_ff_opportunity, per_season: true}
+  pbp: {loader: load_pbp, per_season: true}
+  players: {loader: load_players, per_season: false}
+  ff_playerids: {loader: load_ff_playerids, per_season: false}
+
+# Positions kept in v1. Other labels are mapped first, so fullbacks count as RBs.
+positions: [QB, RB, WR, TE]
+position_map: {FB: RB, HB: RB}
+
+# Tables use different codes for the same franchise. Everything maps to the current code.
+team_codes:
+  ARZ: ARI
+  BLT: BAL
+  CLV: CLE
+  HST: HOU
+  OAK: LV
+  SD: LAC
+  SL: LA
+  STL: LA
